@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" T_Register="61(0)" T_Alu="5(0)" T_Lut="85(0)">
+ <SubModule name="uart_inst" Register="41" Lut="59" T_Register="41(41)" T_Lut="59(59)"/>
+ <SubModule name="driver_inst" Register="20" Alu="5" Lut="26" T_Register="20(20)" T_Alu="5(5)" T_Lut="26(26)">
+  <SubModule name="CLK_27_TO_4_8"/>
+ </SubModule>
+</Module>

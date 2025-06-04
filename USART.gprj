@@ -1,0 +1,20 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="src/driver.v" type="file.verilog" enable="1"/>
+        <File path="src/fifo_buffer.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_rpll/gowin_rpll.v" type="file.verilog" enable="1"/>
+        <File path="src/top.v" type="file.verilog" enable="1"/>
+        <File path="src/uart.v" type="file.verilog" enable="1"/>
+        <File path="src/tangnano9k.cst" type="file.cst" enable="1"/>
+        <File path="src/Makefile" type="file.other" enable="1"/>
+        <File path="src/list_serial.js" type="file.other" enable="1"/>
+        <File path="src/serial_reader.js" type="file.other" enable="1"/>
+        <File path="src/uart.fs" type="file.other" enable="1"/>
+        <File path="src/uart.lushay.json" type="file.other" enable="1"/>
+    </FileList>
+</Project>

@@ -1,0 +1,38 @@
+[
+ {
+  "InstFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/top.v",
+  "InstLine" : 1,
+  "InstName" : "top",
+  "ModuleFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/top.v",
+    "InstLine" : 17,
+    "InstName" : "uart_inst",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/uart.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "uart"
+   },
+   {
+    "InstFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/top.v",
+    "InstLine" : 27,
+    "InstName" : "driver_inst",
+    "ModuleFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/driver.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "driver",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/driver.v",
+      "InstLine" : 38,
+      "InstName" : "CLK_27_TO_4_8",
+      "ModuleFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/gowin_rpll/gowin_rpll.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "Gowin_rPLL"
+     }
+    ]
+   }
+  ]
+ }
+]
