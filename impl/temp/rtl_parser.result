@@ -1,33 +1,41 @@
 [
  {
-  "InstFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/top.v",
+  "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
   "InstLine" : 1,
   "InstName" : "top",
-  "ModuleFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/top.v",
+  "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
   "ModuleLine" : 1,
   "ModuleName" : "top",
   "SubInsts" : [
    {
-    "InstFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/top.v",
-    "InstLine" : 17,
+    "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
+    "InstLine" : 21,
     "InstName" : "uart_inst",
-    "ModuleFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/uart.v",
+    "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v",
     "ModuleLine" : 1,
     "ModuleName" : "uart"
    },
    {
-    "InstFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/top.v",
-    "InstLine" : 27,
+    "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
+    "InstLine" : 31,
+    "InstName" : "DSP_8bit_to_24",
+    "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "DSP"
+   },
+   {
+    "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
+    "InstLine" : 38,
     "InstName" : "driver_inst",
-    "ModuleFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/driver.v",
+    "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v",
     "ModuleLine" : 1,
     "ModuleName" : "driver",
     "SubInsts" : [
      {
-      "InstFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/driver.v",
+      "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v",
       "InstLine" : 38,
       "InstName" : "CLK_27_TO_4_8",
-      "ModuleFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/gowin_rpll/gowin_rpll.v",
+      "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v",
       "ModuleLine" : 10,
       "ModuleName" : "Gowin_rPLL"
      }

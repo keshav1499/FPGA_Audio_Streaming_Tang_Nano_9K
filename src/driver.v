@@ -59,10 +59,15 @@ always @(negedge bck) begin
 end
 
 // === Load mono sample into both channels with 50% volume ===
+//reg [7:0] volume_factor = 8'd100;
 always @(posedge bck) begin
     if (bit_count == 0) begin
-        left_sample  <= mute_state ? 24'd0 : mono_sample >>> 1;  // 50% volume
-        right_sample <= mute_state ? 24'd0 : mono_sample >>> 1;  // 50% volume
+        left_sample  <= mute_state ? 24'd0 : (mono_sample + 8) >>> 4;  // 50% volume
+    end
+end
+always @(posedge bck) begin
+    if (bit_count == 0) begin
+        right_sample  <= mute_state ? 24'd0 : (mono_sample + 8) >>> 4;  // 50% volume
     end
 end
 

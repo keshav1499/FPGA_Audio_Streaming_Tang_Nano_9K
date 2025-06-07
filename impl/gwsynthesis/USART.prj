@@ -4,17 +4,18 @@
     <Version>beta</Version>
     <Device id="GW1NR-9C" package="QFN88P" speed="6" partNumber="GW1NR-LV9QN88PC6/I5"/>
     <FileList>
-        <File path="C:\Gowin\Gowin_V1.9.11.02_x64\IDE\bin\Documents\USART\src\uart.v" type="verilog"/>
-        <File path="C:\Gowin\Gowin_V1.9.11.02_x64\IDE\bin\Documents\USART\src\top.v" type="verilog"/>
-        <File path="C:\Gowin\Gowin_V1.9.11.02_x64\IDE\bin\Documents\USART\src\gowin_rpll\gowin_rpll.v" type="verilog"/>
-        <File path="C:\Gowin\Gowin_V1.9.11.02_x64\IDE\bin\Documents\USART\src\driver.v" type="verilog"/>
-        <File path="C:\Gowin\Gowin_V1.9.11.02_x64\IDE\bin\Documents\USART\src\fifo_buffer.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
         <Option type="global_freq" value="50.000"/>
         <Option type="looplimit" value="2000"/>
-        <Option type="output_file" value="C:\Gowin\Gowin_V1.9.11.02_x64\IDE\bin\Documents\USART\impl\gwsynthesis\USART.vg"/>
+        <Option type="output_file" value="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/impl/gwsynthesis/USART.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="0"/>
         <Option type="top_module" value="top"/>

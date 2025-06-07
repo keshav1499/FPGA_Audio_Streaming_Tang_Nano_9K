@@ -2,23 +2,27 @@
  "Device" : "GW1NR-9C",
  "Files" : [
   {
-   "Path" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/uart.v",
+   "Path" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/top.v",
+   "Path" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/gowin_rpll/gowin_rpll.v",
+   "Path" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/driver.v",
+   "Path" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/src/fifo_buffer.v",
+   "Path" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v",
    "Type" : "verilog"
   }
  ],
@@ -26,7 +30,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "C:/Gowin/Gowin_V1.9.11.02_x64/IDE/bin/Documents/USART/impl/temp/rtl_parser.result",
+ "ResultFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/impl/temp/rtl_parser.result",
  "Top" : "top",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"

@@ -1,8 +1,8 @@
--d C:\Gowin\Gowin_V1.9.11.02_x64\IDE\bin\Documents\USART\impl\gwsynthesis\USART.vg
+-d /home/tallguydesi/Documents/Low_Res_DAC_UART-main/impl/gwsynthesis/USART.vg
 -p GW1NR-9C-QFN88P-6
 -pn GW1NR-LV9QN88PC6/I5
--cst C:\Gowin\Gowin_V1.9.11.02_x64\IDE\bin\Documents\USART\src\tangnano9k.cst
--cfg C:\Gowin\Gowin_V1.9.11.02_x64\IDE\bin\Documents\USART\impl\pnr\device.cfg
+-cst /home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/tangnano9k.cst
+-cfg /home/tallguydesi/Documents/Low_Res_DAC_UART-main/impl/pnr/device.cfg
 -bit
 -tr
 -ph

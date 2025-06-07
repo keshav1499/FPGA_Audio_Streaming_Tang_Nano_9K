@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import serial
 import wave
 import time
@@ -6,13 +8,13 @@ import os
 
 # --- Settings ---
 CHUNK_SIZE = 1024  # bytes per chunk
-UART_BAUD = 143000 # 230400
-AUDIO_RATE = 14000  # must match FPGA setting
+UART_BAUD = 456000  # Match your FPGA's UART baud rate
+AUDIO_RATE = 45600  # Must match FPGA sampling rate
 
 # --- Argument Parsing ---
 parser = argparse.ArgumentParser(description="Stream 8-bit mono WAV to FPGA over UART.")
-parser.add_argument("filename", help="Input .wav file (8-bit mono, 14kHz)")
-parser.add_argument("--port", default="COM4", help="Serial port (default: COM4)")
+parser.add_argument("filename", help="Input .wav file (8-bit mono, 45.6kHz)")
+parser.add_argument("--port", default="/dev/ttyUSB1", help="Serial port (default: /dev/ttyUSB1)")
 parser.add_argument("--loop", action="store_true", help="Loop playback")
 args = parser.parse_args()
 
@@ -24,12 +26,12 @@ if not os.path.exists(args.filename):
 wf = wave.open(args.filename, 'rb')
 assert wf.getnchannels() == 1, "File must be mono."
 assert wf.getsampwidth() == 1, "Must be 8-bit WAV."
-assert wf.getframerate() == AUDIO_RATE, f"Must be {AUDIO_RATE}Hz."
+assert wf.getframerate() == AUDIO_RATE, f"Must be {AUDIO_RATE} Hz."
 
 # --- Open Serial ---
 print(f"Opening {args.port} @ {UART_BAUD} baud...")
 ser = serial.Serial(args.port, UART_BAUD)
-time.sleep(1)  # wait for FPGA to reset if needed
+time.sleep(1)  # optional pause for FPGA to be ready
 
 # --- Streaming Loop ---
 print("Streaming...")
@@ -42,14 +44,11 @@ try:
                 continue
             else:
                 break
-
         ser.write(data)
-
-        # Pacing using actual elapsed time
-        expected_duration = len(data) / AUDIO_RATE
-        time.sleep(expected_duration)
+        time.sleep(len(data) / AUDIO_RATE)  # Pacing
 except KeyboardInterrupt:
     print("Interrupted.")
 finally:
     ser.close()
     wf.close()
+

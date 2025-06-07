@@ -1,6 +1,6 @@
 module uart
 #(
-    parameter DELAY_FRAMES = 189 // 27 MHz / 143000 Baud
+    parameter DELAY_FRAMES = 59.2 // 27 MHz / 456000 Baud
 )
 (
     input clk,
@@ -8,7 +8,7 @@ module uart
     output uart_tx, // Not used
     output reg [5:0] led,
     input btn1,
-    output reg [23:0] mono_sample, // 24-bit padded sample
+    output reg [7:0] data_in, // 24-bit padded sample
     output reg byte_ready
 );
 
@@ -60,16 +60,18 @@ always @(posedge clk) begin
                 rxState <= RX_STATE_READ_WAIT;
         end
         RX_STATE_STOP_BIT: begin
-            rxCounter <= rxCounter + 1;
-            if (rxCounter == DELAY_FRAMES - 1) begin
-                rxState <= RX_STATE_IDLE;
-                rxCounter <= 0;
-                mono_sample <= {dataIn, 16'd0}; // 8-bit to 24-bit
-                byte_ready <= 1;
-                led <= ~dataIn[5:0];
-            end
-        end
+    rxCounter <= rxCounter + 1;
+    if (rxCounter == DELAY_FRAMES - 1) begin
+        rxState <= RX_STATE_IDLE;
+        rxCounter <= 0;
+          data_in <= dataIn;
+        byte_ready <= 1;
+        led <= ~dataIn[5:0];
+    end
+end
+
     endcase
 end
+
 
 endmodule

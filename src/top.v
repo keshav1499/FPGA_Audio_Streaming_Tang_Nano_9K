@@ -7,10 +7,14 @@ module top (
     output ws,
     output data,
     output mute,
+    output pow,
     output [5:0] led
 );
 
+assign pow =1;
+
 wire [23:0] mono_sample;
+wire [7:0] data_in;
 wire byte_ready;
 
 
@@ -20,8 +24,15 @@ uart uart_inst (
     .uart_tx(uart_tx),
     .led(led),
     .btn1(btn1),
-    .mono_sample(mono_sample),
+    .data_in(data_in),
     .byte_ready(byte_ready)
+);
+
+DSP DSP_8bit_to_24  (
+      .clk(clk),
+      .data_in(data_in),
+      .mono_sample(mono_sample),
+      .byte_ready(byte_ready)
 );
 
 driver driver_inst (
