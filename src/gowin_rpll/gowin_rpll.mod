@@ -7,7 +7,7 @@
 
 -mod_name Gowin_rPLL
 -file_name gowin_rpll
--path C:/Gowin/Gowin_V1.9.11_x64/IDE/bin/Documents/DSP_DAC_UDA1334/src/gowin_rpll/
+-path /home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/
 -type PLL
 -rPll true
 -file_type vlg
@@ -15,10 +15,10 @@
 -dyn_idiv_sel false
 -idiv_sel 1
 -dyn_fbdiv_sel false
--fbdiv_sel 16
+-fbdiv_sel 2
 -dyn_odiv_sel false
--odiv_sel 2
--dyn_sdiv_sel 90
+-odiv_sel 8
+-dyn_sdiv_sel 66
 -dyn_da_en true
 -rst_sig false
 -rst_sig_p false

@@ -13,7 +13,7 @@ module top (
 
 assign pow =1;
 
-wire [23:0] mono_sample;
+wire [7:0] mono_sample;
 wire [7:0] data_in;
 wire byte_ready;
 
@@ -28,13 +28,15 @@ uart uart_inst (
     .byte_ready(byte_ready)
 );
 
-DSP DSP_8bit_to_24  (
-      .clk(clk),
-      .data_in(data_in),
-      .mono_sample(mono_sample),
-      .byte_ready(byte_ready)
-);
+wire sample_tick;
 
+DSP fifo_buffer (
+    .clk(clk),
+    .data_in(data_in),
+    .byte_ready(byte_ready),
+    .sample_tick(sample_tick),
+    .mono_sample(mono_sample)
+);
 driver driver_inst (
     .clk(clk),
     .btn1(btn1),
@@ -42,6 +44,7 @@ driver driver_inst (
     .ws(ws),
     .data(data),
     .mute(mute),
+    .sample_tick(sample_tick),
     .mono_sample(mono_sample)
    // .sample_valid(sample_valid)
 );

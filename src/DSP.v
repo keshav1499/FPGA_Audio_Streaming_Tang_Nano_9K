@@ -1,40 +1,34 @@
 module DSP (
-    input wire clk, 
-    input wire [7:0] data_in, 
+    input wire clk,               // 27 MHz
+    input wire [7:0] data_in,
     input wire byte_ready,
-    output reg [23:0] mono_sample
+    input wire sample_tick,       // ~45600 Hz pulse from I2S
+    output reg [7:0] mono_sample
 );
 
-// --- LFSR for 16-bit dither noise ---
-reg [15:0] lfsr = 16'hACE1;
-
-// --- Noise shaping ---
-reg [15:0] error_feedback = 16'd0;
-wire [15:0] shaped_noise;
-assign shaped_noise = lfsr - error_feedback;
-
-// --- FIR filter history ---
-reg [7:0] x_n1 = 0;
-reg [7:0] x_n2 = 0;
-
-// --- FIR output (use wider bit width to prevent overflow) ---
-wire [9:0] filtered_sample;
-assign filtered_sample = (data_in + (x_n1 << 1) + x_n2) >> 2;
+// FIFO parameters
+parameter DEPTH = 256;
+reg [7:0] fifo [0:DEPTH-1];
+reg [7:0] wr_ptr = 0;
+reg [7:0] rd_ptr = 0;
+reg [8:0] count = 0;  // Range: 0 to 256
 
 always @(posedge clk) begin
-    // Update LFSR
-    lfsr <= {lfsr[14:0], lfsr[15] ^ lfsr[13] ^ lfsr[12] ^ lfsr[10]};
+    // Default: no read/write
+    mono_sample <= mono_sample;
 
-    if (byte_ready) begin
-        // Send 24-bit sample: filtered 8-bit + dither
-        mono_sample <= {filtered_sample[7:0], shaped_noise};
+    // === UART Write ===
+    if (byte_ready && count < DEPTH) begin
+        fifo[wr_ptr] <= data_in;
+        wr_ptr <= wr_ptr + 1;
+        count <= count + 1;
+    end
 
-        // Update noise shaping
-        error_feedback <= shaped_noise;
-
-        // Update FIR shift registers
-        x_n2 <= x_n1;
-        x_n1 <= data_in;
+    // === I2S Read ===
+    if (sample_tick && count > 0) begin
+        mono_sample <= fifo[rd_ptr];
+        rd_ptr <= rd_ptr + 1;
+        count <= count - 1;
     end
 end
 

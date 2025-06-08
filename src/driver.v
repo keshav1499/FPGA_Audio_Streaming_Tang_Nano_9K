@@ -1,28 +1,34 @@
 module driver (
-    input wire clk,         // 27 MHz system clock
-    input wire btn1,        // Mute toggle
-    output wire bck,        // 4.8 MHz bit clock
-    output reg ws = 0,      // Word Select
-    output reg data = 0,    // I2S serial data output
+    input wire clk,            // 27 MHz system clock
+    input wire btn1,           // Mute toggle
+    output wire bck,           // 840 kHz bit clock
+    output reg ws = 0,         // Word Select (L/R toggle)
+    output reg data = 0,       // I2S serial data output
     output wire mute,
-
-    input wire [23:0] mono_sample // 24-bit audio sample
+    output wire sample_tick,
+    input wire [7:0] mono_sample // 8-bit mono audio sample
 );
 
 // === Parameters ===
-localparam RESBIT     = 5'd24;                     
-localparam TOTAL_BITS = (RESBIT + 1) * 2;  // 50
+localparam RESBIT     = 5'd8;
+localparam TOTAL_BITS = RESBIT * 2 + 2; // 2 delay bits (one per channel)
 localparam COUNTMAX   = TOTAL_BITS - 1;
+
+reg [4:0] bit_count = 0;
+
+assign sample_tick = (bit_count == COUNTMAX);
 
 // === Mute Logic ===
 reg btn1_sync_0 = 1, btn1_sync_1 = 1;
 reg btn1_prev = 1;
 reg mute_state = 0;
 
+assign mute = mute_state;
+
 always @(posedge clk) begin
     btn1_sync_0 <= btn1;
     btn1_sync_1 <= btn1_sync_0;
-    btn1_prev <= btn1_sync_1;
+    btn1_prev   <= btn1_sync_1;
 end
 
 wire btn1_pressed = (btn1_prev == 1) && (btn1_sync_1 == 0);
@@ -32,20 +38,21 @@ always @(posedge clk) begin
         mute_state <= ~mute_state;
 end
 
-assign mute = mute_state;
-
 // === Clock Generation ===
-Gowin_rPLL CLK_27_TO_4_8 (
+Gowin_rPLL CLK_27_TO_818K (
     .clkoutd(bck),
     .clkin(clk)
 );
 
-// === Sample Registers ===
-reg [23:0] left_sample  = 24'd0;
-reg [23:0] right_sample = 24'd0;
+// === Sample Handling ===
+reg [7:0] sample = 8'd0;
 
-reg [5:0] bit_count = 0;
+always @(posedge bck) begin
+    if (bit_count == 0)
+        sample <= mute_state ? 8'd0 : mono_sample >> 1;
+end
 
+// === Bit Counter ===
 always @(posedge bck) begin
     if (bit_count == COUNTMAX)
         bit_count <= 0;
@@ -53,34 +60,22 @@ always @(posedge bck) begin
         bit_count <= bit_count + 1;
 end
 
+// === WS Toggling (1 cycle before MSB) ===
 always @(negedge bck) begin
-    if (bit_count == 1 || bit_count == RESBIT + 2)
+    if (bit_count == 0 || bit_count == RESBIT + 1)
         ws <= ~ws;
 end
 
-// === Load mono sample into both channels with 50% volume ===
-//reg [7:0] volume_factor = 8'd100;
-always @(posedge bck) begin
-    if (bit_count == 0) begin
-        left_sample  <= mute_state ? 24'd0 : (mono_sample + 8) >>> 4;  // 50% volume
-    end
-end
-always @(posedge bck) begin
-    if (bit_count == 0) begin
-        right_sample  <= mute_state ? 24'd0 : (mono_sample + 8) >>> 4;  // 50% volume
-    end
-end
-
-// === I2S Bitstream Output ===
+// === I2S Output ===
 always @(negedge bck) begin
     if (bit_count == 0 || bit_count == RESBIT + 1) begin
-        data <= 0; // Wait bit
-    end else if (bit_count < RESBIT + 1) begin
-        data <= left_sample[23 - (bit_count - 1)];
-    end else if (bit_count < TOTAL_BITS) begin
-        data <= right_sample[23 - (bit_count - (RESBIT + 1))];
+        data <= 1'b0; // Wait bit per I2S spec
+    end else if (bit_count > 0 && bit_count <= RESBIT) begin
+        data <= sample[RESBIT - bit_count]; // Left channel
+    end else if (bit_count > RESBIT + 1 && bit_count <= RESBIT + 1 + RESBIT) begin
+        data <= sample[RESBIT - (bit_count - (RESBIT + 1))]; // Right channel
     end else begin
-        data <= 0;
+        data <= 1'b0;
     end
 end
 
