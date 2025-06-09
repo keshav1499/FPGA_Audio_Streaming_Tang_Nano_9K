@@ -19,9 +19,9 @@
     "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
     "InstLine" : 33,
     "InstName" : "fifo_buffer",
-    "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v",
+    "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v",
     "ModuleLine" : 1,
-    "ModuleName" : "DSP"
+    "ModuleName" : "FIFO"
    },
    {
     "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
@@ -33,8 +33,8 @@
     "SubInsts" : [
      {
       "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v",
-      "InstLine" : 42,
-      "InstName" : "CLK_27_TO_818K",
+      "InstLine" : 39,
+      "InstName" : "CLK_27_TO_1499K",
       "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v",
       "ModuleLine" : 10,
       "ModuleName" : "Gowin_rPLL"

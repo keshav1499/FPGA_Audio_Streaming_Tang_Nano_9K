@@ -15,10 +15,10 @@
 -dyn_idiv_sel false
 -idiv_sel 1
 -dyn_fbdiv_sel false
--fbdiv_sel 2
+-fbdiv_sel 1
 -dyn_odiv_sel false
--odiv_sel 8
--dyn_sdiv_sel 66
+-odiv_sel 16
+-dyn_sdiv_sel 18
 -dyn_da_en true
 -rst_sig false
 -rst_sig_p false

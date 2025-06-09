@@ -13,8 +13,8 @@ module top (
 
 assign pow =1;
 
-wire [7:0] mono_sample;
-wire [7:0] data_in;
+wire [15:0] mono_sample;
+wire [15:0] data_in;
 wire byte_ready;
 
 
@@ -30,7 +30,7 @@ uart uart_inst (
 
 wire sample_tick;
 
-DSP fifo_buffer (
+FIFO fifo_buffer (
     .clk(clk),
     .data_in(data_in),
     .byte_ready(byte_ready),

@@ -1,6 +1,5 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v'
 Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v'
 Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v'
 Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v'
@@ -8,20 +7,22 @@ Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/to
 Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v'
 Compiling module 'top'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v":1)
 Compiling module 'uart'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":1)
-WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":45)
-WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":48)
-WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":56)
-WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":63)
-Compiling module 'DSP'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v":1)
-Extracting RAM for identifier 'fifo'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v":11)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v":23)
-WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v":24)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v":30)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v":31)
-WARN  (EX3073) : Port 'clkout' remains unconnected for this instance("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v":45)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":57)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":61)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":70)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":80)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 24("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":97)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":103)
+Compiling module 'FIFO'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":1)
+Extracting RAM for identifier 'fifo'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":10)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":18)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":19)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":24)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":25)
+WARN  (EX3073) : Port 'clkout' remains unconnected for this instance("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v":42)
 Compiling module 'driver'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v":1)
 Compiling module 'Gowin_rPLL'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v":10)
-WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v":60)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v":59)
 NOTE  (EX0101) : Current top module is "top"
 [5%] Running netlist conversion ...
 Running device independent optimization ...

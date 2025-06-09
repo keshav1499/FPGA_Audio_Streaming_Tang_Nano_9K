@@ -4,7 +4,6 @@
     <Version>beta</Version>
     <Device id="GW1NR-9C" package="QFN88P" speed="6" partNumber="GW1NR-LV9QN88PC6/I5"/>
     <FileList>
-        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v" type="verilog"/>
         <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v" type="verilog"/>
         <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v" type="verilog"/>
         <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v" type="verilog"/>

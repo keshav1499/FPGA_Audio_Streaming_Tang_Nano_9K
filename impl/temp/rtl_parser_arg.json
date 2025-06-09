@@ -2,10 +2,6 @@
  "Device" : "GW1NR-9C",
  "Files" : [
   {
-   "Path" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/DSP.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v",
    "Type" : "verilog"
   },
