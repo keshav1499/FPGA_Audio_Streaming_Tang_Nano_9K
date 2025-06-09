@@ -9,9 +9,9 @@ import struct
 
 # --- Settings ---
 CHUNK_SAMPLES = 512  # Samples per chunk (each sample = 2 bytes)
-UART_BAUD = 1764000   # Match your FPGA UART receiver882000
-AUDIO_RATE = 88200   # Must match FPGA playback rate44100
-VOLUME = 0.7         # Volume control (0.0 to 1.0)
+UART_BAUD = 882000   # Match your FPGA UART receiver baud 882000
+AUDIO_RATE = 44100   # Must match FPGA playback rate 44100
+VOLUME = 0.5         # Volume control (0.0 to 1.0)
 
 # --- Argument Parsing ---
 parser = argparse.ArgumentParser(description="Stream 16-bit mono WAV to FPGA over UART (LSB first).")
