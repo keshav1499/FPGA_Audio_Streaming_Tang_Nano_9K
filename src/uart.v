@@ -1,6 +1,6 @@
 module uart
 #(
-    parameter DELAY_FRAMES = 15  // For 27 MHz / 882000 ≈ 30.6, round to 31
+    parameter DELAY_FRAMES = 31  // For 27 MHz / 882000 ≈ 30.6, round to 31
 )
 (
     input clk,
