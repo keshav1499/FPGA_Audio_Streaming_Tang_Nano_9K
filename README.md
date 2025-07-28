@@ -91,7 +91,7 @@ The Python script uses fixed-point volume control before transmission:
 scaled_sample = (sample * scale + 128) >> 8
 ```
 This avoids float ops, maintains dynamic range, and fits resource-constrained designs.
-You may try in different PFGAs as well
+You may try in different FPGAs as well
 ---
 
 ## 💡 Tips
