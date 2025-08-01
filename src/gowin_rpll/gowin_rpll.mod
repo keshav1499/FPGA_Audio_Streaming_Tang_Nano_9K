@@ -7,7 +7,7 @@
 
 -mod_name Gowin_rPLL
 -file_name gowin_rpll
--path /home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/
+-path /home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/gowin_rpll/
 -type PLL
 -rPll true
 -file_type vlg
@@ -15,10 +15,10 @@
 -dyn_idiv_sel false
 -idiv_sel 1
 -dyn_fbdiv_sel false
--fbdiv_sel 1
+-fbdiv_sel 4
 -dyn_odiv_sel false
--odiv_sel 16
--dyn_sdiv_sel 18
+-odiv_sel 4
+-dyn_sdiv_sel 36
 -dyn_da_en true
 -rst_sig false
 -rst_sig_p false

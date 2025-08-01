@@ -41,7 +41,7 @@ always @(posedge clk) begin
 end
 
 // === Clock Generation ===
-// Instantiate Gowin rPLL to convert clk (e.g., 27 MHz) to bck (1.4994 MHz)
+// Instantiate Gowin rPLL to convert clk (e.g., 27 MHz) to bck (2.99 MHz)
 Gowin_rPLL CLK_27_TO_1499K (
     .clkoutd(bck),
     .clkin(clk)

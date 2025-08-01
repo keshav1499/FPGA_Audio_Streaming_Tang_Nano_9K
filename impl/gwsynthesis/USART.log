@@ -6,11 +6,13 @@ Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_
 Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v'
 Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v'
 Compiling module 'top'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v":1)
-Compiling module 'uart'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":1)
-WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":51)
-WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":55)
-WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":64)
-WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":74)
+Compiling module 'uart'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":11)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":76)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":84)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":96)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":110)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 24("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":131)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":139)
 Compiling module 'FIFO'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v":1)
 Extracting RAM for identifier 'fifo'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v":13)
 WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v":23)
