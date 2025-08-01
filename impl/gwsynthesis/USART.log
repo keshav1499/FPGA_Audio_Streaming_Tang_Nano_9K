@@ -1,28 +1,26 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v'
-Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v'
-Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v'
-Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v'
-Analyzing Verilog file '/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v'
-Compiling module 'top'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v":1)
-Compiling module 'uart'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":1)
-WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":57)
-WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":61)
-WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":70)
-WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":80)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 24("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":97)
-WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v":103)
-Compiling module 'FIFO'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":1)
-Extracting RAM for identifier 'fifo'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":10)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":18)
-WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":19)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":24)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v":25)
-WARN  (EX3073) : Port 'clkout' remains unconnected for this instance("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v":42)
-Compiling module 'driver'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v":1)
-Compiling module 'Gowin_rPLL'("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v":10)
-WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v":59)
+Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/driver.v'
+Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v'
+Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/gowin_rpll/gowin_rpll.v'
+Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v'
+Analyzing Verilog file '/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v'
+Compiling module 'top'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v":1)
+Compiling module 'uart'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":1)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":51)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":55)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":64)
+WARN  (EX3791) : Expression size 14 truncated to fit in target size 13("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v":74)
+Compiling module 'FIFO'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v":1)
+Extracting RAM for identifier 'fifo'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v":13)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v":23)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v":24)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v":30)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v":31)
+WARN  (EX3073) : Port 'clkout' remains unconnected for this instance("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/driver.v":48)
+Compiling module 'driver'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/driver.v":1)
+Compiling module 'Gowin_rPLL'("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/gowin_rpll/gowin_rpll.v":10)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/driver.v":65)
 NOTE  (EX0101) : Current top module is "top"
 [5%] Running netlist conversion ...
 Running device independent optimization ...
@@ -40,6 +38,6 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-[95%] Generate netlist file "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/impl/gwsynthesis/USART.vg" completed
-[100%] Generate report file "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/impl/gwsynthesis/USART_syn.rpt.html" completed
+[95%] Generate netlist file "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/impl/gwsynthesis/USART.vg" completed
+[100%] Generate report file "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/impl/gwsynthesis/USART_syn.rpt.html" completed
 GowinSynthesis finish

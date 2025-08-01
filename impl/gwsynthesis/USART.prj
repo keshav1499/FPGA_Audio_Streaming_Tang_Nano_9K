@@ -4,17 +4,17 @@
     <Version>beta</Version>
     <Device id="GW1NR-9C" package="QFN88P" speed="6" partNumber="GW1NR-LV9QN88PC6/I5"/>
     <FileList>
-        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v" type="verilog"/>
-        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v" type="verilog"/>
-        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v" type="verilog"/>
-        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v" type="verilog"/>
-        <File path="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/driver.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/gowin_rpll/gowin_rpll.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v" type="verilog"/>
+        <File path="/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
         <Option type="global_freq" value="50.000"/>
         <Option type="looplimit" value="2000"/>
-        <Option type="output_file" value="/home/tallguydesi/Documents/Low_Res_DAC_UART-main/impl/gwsynthesis/USART.vg"/>
+        <Option type="output_file" value="/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/impl/gwsynthesis/USART.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="0"/>
         <Option type="top_module" value="top"/>

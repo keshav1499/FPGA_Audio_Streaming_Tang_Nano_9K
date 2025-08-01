@@ -1,8 +1,8 @@
--d /home/tallguydesi/Documents/Low_Res_DAC_UART-main/impl/gwsynthesis/USART.vg
+-d /home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/impl/gwsynthesis/USART.vg
 -p GW1NR-9C-QFN88P-6
 -pn GW1NR-LV9QN88PC6/I5
--cst /home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/tangnano9k.cst
--cfg /home/tallguydesi/Documents/Low_Res_DAC_UART-main/impl/pnr/device.cfg
+-cst /home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/tangnano9k.cst
+-cfg /home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/impl/pnr/device.cfg
 -bit
 -tr
 -ph

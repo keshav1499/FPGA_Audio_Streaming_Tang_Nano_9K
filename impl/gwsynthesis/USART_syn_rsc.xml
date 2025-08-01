@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" T_Register="171(0)" T_Alu="85(0)" T_Lut="131(0)" T_Bsram="1(0)">
- <SubModule name="uart_inst" Register="118" Alu="57" Lut="90" T_Register="118(118)" T_Alu="57(57)" T_Lut="90(90)"/>
+<Module name="top" T_Register="106(0)" T_Alu="28(0)" T_Lut="100(0)" T_Bsram="1(0)" T_Ssram="2(0)">
+ <SubModule name="uart_inst" Register="53" Lut="59" Ssram="2" T_Register="53(53)" T_Lut="59(59)" T_Ssram="2(2)"/>
  <SubModule name="fifo_buffer" Register="25" Alu="23" Lut="8" Bsram="1" T_Register="25(25)" T_Alu="23(23)" T_Lut="8(8)" T_Bsram="1(1)"/>
  <SubModule name="driver_inst" Register="28" Alu="5" Lut="33" T_Register="28(28)" T_Alu="5(5)" T_Lut="33(33)">
   <SubModule name="CLK_27_TO_1499K"/>
