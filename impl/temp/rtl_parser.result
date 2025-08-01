@@ -1,41 +1,41 @@
 [
  {
-  "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
+  "InstFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v",
   "InstLine" : 1,
   "InstName" : "top",
-  "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
+  "ModuleFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v",
   "ModuleLine" : 1,
   "ModuleName" : "top",
   "SubInsts" : [
    {
-    "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
+    "InstFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v",
     "InstLine" : 21,
     "InstName" : "uart_inst",
-    "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/uart.v",
-    "ModuleLine" : 1,
+    "ModuleFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/uart.v",
+    "ModuleLine" : 11,
     "ModuleName" : "uart"
    },
    {
-    "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
+    "InstFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v",
     "InstLine" : 33,
     "InstName" : "fifo_buffer",
-    "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/fifo_buffer.v",
+    "ModuleFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/fifo_buffer.v",
     "ModuleLine" : 1,
     "ModuleName" : "FIFO"
    },
    {
-    "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/top.v",
+    "InstFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/top.v",
     "InstLine" : 40,
     "InstName" : "driver_inst",
-    "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v",
+    "ModuleFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/driver.v",
     "ModuleLine" : 1,
     "ModuleName" : "driver",
     "SubInsts" : [
      {
-      "InstFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/driver.v",
-      "InstLine" : 39,
+      "InstFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/driver.v",
+      "InstLine" : 45,
       "InstName" : "CLK_27_TO_1499K",
-      "ModuleFile" : "/home/tallguydesi/Documents/Low_Res_DAC_UART-main/src/gowin_rpll/gowin_rpll.v",
+      "ModuleFile" : "/home/tallguydesi/Documents/GitHub/FPGA_Audio_Streaming_Tang_Nano_9K/src/gowin_rpll/gowin_rpll.v",
       "ModuleLine" : 10,
       "ModuleName" : "Gowin_rPLL"
      }
