@@ -58,7 +58,8 @@ pip install pyserial
 ### 🧠 FPGA Side
 - Gowin FPGA board (e.g., Tang Nano 9K)
 - UDA1334A or similar I2S DAC
-- UART connected to PC (FTDI, CP2102, etc.)
+- UART connected to PC (FTDI, CP2102, etc.
+- Keep in mind UART
 - Audio output (e.g., speakers or amp)
 
 ---
