@@ -127,3 +127,7 @@ This project is released under the MIT License.
 
 - Verilog logic inspired by open-source UART and I2S implementations
 - Python fixed-point scaling adapted for embedded streaming
+
+## Gallery
+![DAC](https://github.com/user-attachments/assets/f16bc604-9757-49dc-bb21-a1b27e0b23c8)
+
